@@ -3,7 +3,7 @@
   <head></head>
   <body>
     <h1>Creating DOM elements</h1>
-    <button>Create a new element</button>
+    <button id="button2" onclick="addName">Create a new element</button>
     <div>
       <h2>Second heading</h2>
       <div>
@@ -16,8 +16,19 @@
         When the user clicks the button, your own name should be added inside the div
         next to the button
       -->
+      <div class="bob">
+        <button class="buttonClass" onclick="addName()">Your name!</button>
+      </div>
     </div>
     <script>
+      //my code
+      function addName() {
+        let nameCreate = document.createElement("p");
+        nameCreate.textContent = "Eetu";
+        let idiot = document.querySelector(".bob");
+        idiot.appendChild(nameCreate);
+      }
+      /*earlier code
       let addButton = document.querySelector("button");
       addButton.addEventListener("click", addPineapple);
 
@@ -27,7 +38,7 @@
 
         let ulElement = document.querySelector("ul");
         ulElement.appendChild(pineappleListItem);
-      }
+      } */
     </script>
   </body>
 </html>
